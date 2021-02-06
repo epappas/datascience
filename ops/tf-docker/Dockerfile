@@ -7,3 +7,6 @@ RUN conda install --quiet --yes \
 RUN pip install --upgrade jupyter_http_over_ws>=0.0.7 && \
   jupyter serverextension enable --py jupyter_http_over_ws
 
+ADD requirements.txt /tmp/requirements.txt
+
+RUN pip install -r /tmp/requirements.txt
